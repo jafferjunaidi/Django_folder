@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <div class="container" style="margin-top: 70px; justify-items: center;">
+    <h1>Student Form</h1>
+    <form method="post">
+     {% csrf_token %}
+    <input type="text" placeholder="Enter student name" name="std_name"><br><br>
+    <input type="number" placeholder="Enter student age" name="std_age"><br><br>
+    <input type="text" placeholder="Enter student city" name="std_city"><br><br>
+    <input type="email" placeholder="Enter student email" name="std_mail"><br><br>
+    <input type="submit" value="Submit now" style="margin-left: 42px;"><br><br>
+    <button style="margin-left: 42px;">
+        <a href="{% url "showstd" %}" style="text-decoration: none; color:black;" target=_blank>Show_data</a>
+    </button>
+    </form>
+    </div> 
+</body>
+</html>
